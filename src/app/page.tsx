@@ -19,7 +19,13 @@ export type Categoria =
   | "Red"
   | "Seguridad"
   | "Facturación"
-  | "Monitoreo";
+  | "Monitoreo"
+  | "Integración"
+  | "Analítica"
+  | "Migración"
+  | "DevOps"
+  | "Aplicaciones empresariales"
+  | "Gobernanza";
 
 export type Dificultad = "Fácil" | "Media" | "Difícil";
 
@@ -638,6 +644,12 @@ const CATEGORIAS: Categoria[] = [
   "Seguridad",
   "Facturación",
   "Monitoreo",
+  "Integración",
+  "Analítica",
+  "Migración",
+  "DevOps",
+  "Aplicaciones empresariales",
+  "Gobernanza",
 ];
 
 const DIFICULTADES: Dificultad[] = ["Fácil", "Media", "Difícil"];
