@@ -770,7 +770,10 @@ function Card({
             )}
           >
             {/* Front */}
-            <div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-gradient-to-br from-orange-100 via-yellow-50 to-blue-50 p-5 [backface-visibility:hidden] dark:from-blue-900 dark:via-purple-900 dark:to-neutral-900">
+            
+<div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-gradient-to-br from-orange-100 via-yellow-50 to-blue-50 p-5 [backface-visibility:hidden] dark:from-blue-900 dark:via-purple-900 dark:to-neutral-900">
+
+
               <div className="flex items-center gap-3">
                 <div className="size-12 shrink-0 overflow-hidden rounded-xl bg-white/70 backdrop-blur flex items-center justify-center dark:bg-neutral-700/50">
                   {card.imagen ? (
