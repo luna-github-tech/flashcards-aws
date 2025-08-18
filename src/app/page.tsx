@@ -784,8 +784,11 @@ function Card({
                   )}
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
-                  <Tag className={tagColor(card.categoria)}>{card.categoria}</Tag>
-                  <Tag className="bg-gray-50 text-gray-700 border-gray-200 dark:bg-neutral-800 dark:text-gray-200 dark:border-neutral-700">{card.dificultad}</Tag>
+                  
+<Tag className="bg-white/15 text-white border-white/20 backdrop-blur">{card.categoria}</Tag>
+<Tag className="bg-white/15 text-white border-white/20 backdrop-blur">{card.dificultad}</Tag>
+
+
                   {learned && <Tag className="bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-200 dark:border-emerald-800">Aprendida ✅</Tag>}
                 </div>
               </div>
@@ -807,12 +810,14 @@ className="rounded-xl bg-aws-violet text-white px-3 py-1.5 text-sm shadow hover:
                   </button>
                   <button
                     onClick={() => onToggleLearned?.(card.id)}
-                    className={clsx(
-                      "rounded-xl border px-3 py-1.5 text-sm",
-                      learned
-                        ? "bg-emerald-600 text-white border-emerald-600"
-                        : "border-transparent bg-blue-600 text-white shadow hover:scale-105 hover:bg-blue-700 transition-transform"
-                    )}
+                    
+className={clsx(
+  "rounded-xl px-3 py-1.5 text-sm shadow transition",
+  learned
+    ? "bg-[#1D8102] text-white" // Verde AWS (aprendida)
+    : "bg-[#FF9900] text-white hover:brightness-110" // Naranja AWS
+)}
+
                   >
                     {learned ? "Marcada como aprendida" : "Marcar como aprendida"}
                   </button>
@@ -821,7 +826,11 @@ className="rounded-xl bg-aws-violet text-white px-3 py-1.5 text-sm shadow hover:
             </div>
 
             {/* Back */}
-            <div className="absolute inset-0 rounded-2xl bg-white p-5 [transform:rotateY(180deg)] [backface-visibility:hidden] dark:bg-neutral-900">
+            
+<div className="absolute inset-0 rounded-2xl border border-white/10 bg-[#0F1624]/90 p-5 backdrop-blur [transform:rotateY(180deg)] [backface-visibility:hidden]">
+
+
+
               <div className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Respuesta</div>
               <div className="mt-2 text-lg text-gray-900 dark:text-gray-100">{card.respuesta}</div>
               {card.enlace && (
@@ -843,12 +852,14 @@ className="rounded-xl bg-aws-violet text-white px-3 py-1.5 text-sm shadow hover:
                 </button>
                 <button
                   onClick={() => onToggleLearned?.(card.id)}
-                  className={clsx(
-                    "rounded-xl border px-3 py-1.5 text-sm",
-                    learned
-                      ? "bg-emerald-600 text-white border-emerald-600"
-                      : "border-transparent bg-blue-600 text-white shadow hover:scale-105 hover:bg-blue-700 transition-transform"
-                  )}
+                  
+className={clsx(
+  "rounded-xl px-3 py-1.5 text-sm shadow transition",
+  learned
+    ? "bg-[#1D8102] text-white" // Verde AWS (aprendida)
+    : "bg-[#FF9900] text-white hover:brightness-110" // Naranja AWS
+)}
+
                 >
                   {learned ? "Marcada como aprendida" : "Marcar como aprendida"}
                 </button>
@@ -902,7 +913,9 @@ function Controls({
         </div>
       </div>
 
-      <div className="flex flex-col gap-3 rounded-2xl border p-3 dark:border-neutral-800 sm:flex-row sm:items-center">
+     <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[#0F1624]/60 backdrop-blur p-3 sm:flex-row sm:items-center">
+
+
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
@@ -1040,7 +1053,8 @@ export default function FlashcardsApp() {
   }, [mode, filtered, randomDeck, randomIdx, examDeck, examIdx]);
 
   return (
-    <main className="mx-auto max-w-6xl px-4 py-10">
+    <main className="min-h-screen bg-[#0B1220] text-slate-100 mx-auto max-w-6xl px-4 py-10">
+
       <Controls
         categorias={CATEGORIAS}
         categoriaSel={categoriaSel}

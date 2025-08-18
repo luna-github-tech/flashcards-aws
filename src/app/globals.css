@@ -1,9 +1,23 @@
 @import "tailwindcss";
 
+/* Paleta base clara/oscura */
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0f172a; /* slate-900 */
+  --muted: #64748b;      /* slate-500 */
+  --panel: #ffffff;
 }
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0b1220; /* fondo general oscuro (azul/gris AWS) */
+    --foreground: #e5e7eb; /* text-slate-200 */
+    --muted: #94a3b8;      /* slate-400 */
+    --panel: #111827;      /* gray 900 para tarjetas/paneles claros */
+  }
+}
+
+
 
 @theme inline {
 
@@ -44,5 +58,8 @@
 body {
   background: var(--background);
   color: var(--foreground);
+
   font-family: Arial, Helvetica, sans-serif;
 }
+
+
