@@ -785,9 +785,13 @@ function Card({
                 </div>
                 <div className="flex flex-wrap items-center gap-2">
                   
-<Tag className="bg-white/15 text-white border-white/20 backdrop-blur">{card.categoria}</Tag>
-<Tag className="bg-white/15 text-white border-white/20 backdrop-blur">{card.dificultad}</Tag>
+<Tag className="bg-[#2B1C0F] text-[#FFB84D] border-[#3D2A14]">
+  {card.categoria}
+</Tag>
 
+<Tag className="bg-[#102840] text-[#82CFFF] border-[#1F3A5A]">
+  {card.dificultad}
+</Tag>
 
                   {learned && <Tag className="bg-emerald-50 text-emerald-700 border-emerald-200 dark:bg-emerald-900/30 dark:text-emerald-200 dark:border-emerald-800">Aprendida ✅</Tag>}
                 </div>
@@ -844,12 +848,14 @@ className={clsx(
                 </a>
               )}
               <div className="mt-6 flex justify-between">
-                <button
-                  onClick={() => setFlipped(false)}
-                  className="rounded-xl border border-transparent bg-blue-600 text-white px-3 py-1.5 text-sm shadow hover:scale-105 hover:bg-blue-700 transition-transform"
-                >
-                  Volver a la pregunta
-                </button>
+                
+<button
+  onClick={() => setFlipped(false)}
+  className="rounded-xl border border-transparent bg-[#0972D3] text-white px-3 py-1.5 text-sm shadow hover:bg-[#0A66C2] transition"
+>
+  Volver a la pregunta
+</button>
+
                 <button
                   onClick={() => onToggleLearned?.(card.id)}
                   
@@ -900,11 +906,25 @@ function Controls({
 }) {
   return (
     <div className="mx-auto mb-6 flex w-full max-w-5xl flex-col gap-4">
-      <div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
-        <h1 className="text-2xl font-semibold tracking-tight">Flashcards AWS CLF-C02</h1>
+      
+<div className="flex flex-col items-start justify-between gap-3 sm:flex-row sm:items-center">
+        
+        <div className="text-center my-6">
+  <h1 className="text-3xl font-bold text-white">
+    Flashcards AWS CLF-C02
+  </h1>
+  <p className="text-lg text-gray-400 mt-2">
+    Tu compañero de estudio para la certificación Cloud Practitioner
+  </p>
+</div>
+
+
         <div className="flex items-center gap-2 text-sm">
+
+
           <div className="h-2 w-32 overflow-hidden rounded-full bg-gray-200 dark:bg-neutral-800">
             <div
+
               className="h-full bg-gradient-to-r from-emerald-500 to-blue-500 transition-all"
               style={{ width: `${Math.min(100, Math.max(0, progressPct))}%` }}
             />
@@ -913,9 +933,7 @@ function Controls({
         </div>
       </div>
 
-     <div className="flex flex-col gap-3 rounded-2xl border border-white/10 bg-[#0F1624]/60 backdrop-blur p-3 sm:flex-row sm:items-center">
-
-
+      <div className="flex flex-col gap-3 rounded-2xl border p-3 dark:border-neutral-800 sm:flex-row sm:items-center">
         <input
           value={query}
           onChange={(e) => setQuery(e.target.value)}
