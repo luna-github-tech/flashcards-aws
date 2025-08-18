@@ -6,10 +6,32 @@
 }
 
 @theme inline {
+
   --color-background: var(--background);
   --color-foreground: var(--foreground);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
+
+  /* 🎨 Paleta AWS */
+  --color-aws-orange: #FF9900; /* naranja clásico */
+  --color-aws-light:  #146EB4; /* azul acento moderno */
+  --color-aws-blue:   #232F3E; /* azul consola AWS */
+  --color-aws-ink:    #1B2530; /* gris-azulado profundo (oscuro) */
+  --color-aws-gray:   #F2F3F3; /* gris UI claro */
+  --color-aws-green:  #1D8102; /* éxito */
+
+--color-aws-purple: #6b21a8; /* morado fuerte */
+  --color-aws-violet: #9333ea; /* violeta vibrante */
+  --color-aws-indigo: #3b82f6; /* azul índigo brillante */
+
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+
+
+
 }
 
 @media (prefers-color-scheme: dark) {

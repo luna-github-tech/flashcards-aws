@@ -771,7 +771,7 @@ function Card({
           >
             {/* Front */}
             
-<div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-gradient-to-br from-orange-100 via-yellow-50 to-blue-50 p-5 [backface-visibility:hidden] dark:from-blue-900 dark:via-purple-900 dark:to-neutral-900">
+<div className="absolute inset-0 flex flex-col justify-between rounded-2xl bg-gradient-to-br from-aws-purple via-aws-violet to-aws-indigo p-5 [backface-visibility:hidden] dark:from-purple-900 dark:via-violet-900 dark:to-indigo-900">
 
 
               <div className="flex items-center gap-3">
@@ -793,11 +793,15 @@ function Card({
                 {card.pregunta}
               </div>
               <div className="flex items-center justify-between pt-2">
-                <div className="text-xs text-gray-600 dark:text-gray-400">Haz clic para ver la respuesta</div>
+                
+<div className="text-xs text-gray-600 dark:text-gray-400">Haz clic para ver la respuesta</div>
                 <div className="flex gap-2">
                   <button
                     onClick={() => setFlipped(true)}
-                    className="rounded-xl border border-transparent bg-blue-600 text-white px-3 py-1.5 text-sm shadow hover:scale-105 hover:bg-blue-700 transition-transform"
+                    
+// Botón primario (Mostrar respuesta)
+className="rounded-xl bg-aws-violet text-white px-3 py-1.5 text-sm shadow hover:opacity-90 transition"
+
                   >
                     Mostrar respuesta
                   </button>
