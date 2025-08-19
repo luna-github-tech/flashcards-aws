@@ -62,4 +62,26 @@ body {
   font-family: Arial, Helvetica, sans-serif;
 }
 
+/* --- Fix flip 3D en móviles/iOS --- */
+/* Flip 3D cross-browser (móvil y desktop) */
+.perspective-1000 {
+  perspective: 1000px;
+  -webkit-perspective: 1000px;
+}
 
+.flip-rotor {
+  transform: rotateY(0deg);
+  transition: transform 0.5s ease;
+  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+  will-change: transform;
+}
+
+.flip-rotor.is-flipped {
+  transform: rotateY(180deg);
+}
+
+.backface {
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}

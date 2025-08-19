@@ -762,12 +762,15 @@ function Card({
   return (
     <div className="relative">
       <div className="group mx-auto grid max-w-3xl grid-cols-1 gap-4">
-        <div className="relative h-[340px] w-full [perspective:1000px]">
+        
+<div className="relative h-[340px] w-full perspective-1000">
+
           <div
             className={clsx(
               "absolute inset-0 rounded-2xl shadow-lg hover:shadow-2xl transition-all duration-500 [transform-style:preserve-3d]",
               flipped ? "[transform:rotateY(180deg)]" : ""
             )}
+
           >
             {/* Front */}
             
@@ -835,8 +838,11 @@ className={clsx(
 
 
 
-              <div className="text-sm uppercase tracking-wide text-gray-500 dark:text-gray-400">Respuesta</div>
-              <div className="mt-2 text-lg text-gray-900 dark:text-gray-100">{card.respuesta}</div>
+              <div className="mt-2 text-lg bg-gradient-to-r from-blue-400 to-emerald-400 bg-clip-text text-transparent">
+  {card.respuesta}
+</div>
+
+
               {card.enlace && (
                 <a
                   className="mt-4 inline-flex text-sm text-blue-600 underline hover:no-underline dark:text-blue-400"
